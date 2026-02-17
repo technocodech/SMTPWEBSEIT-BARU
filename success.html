@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Pendaftaran Berhasil - SMK MBP</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6.5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-navy: #0A1A3A;
+            --secondary-gold: #D4AF37;
+            --accent-gold: #FFD700;
+            --light-gold: #FFF8E1;
+            --dark-blue: #06122A;
+        }
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #F4C430 100%);
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-navy {
+            background: linear-gradient(135deg, #0A1A3A 0%, #1e3a5f 100%);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(10, 26, 58, 0.2);
+        }
+        .btn-navy:hover {
+            background: linear-gradient(135deg, #0A1A3A 0%, #2a4a6a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(10, 26, 58, 0.3);
+        }
+        .btn-navy i {
+            color: #FFD700;
+        }
+        
+        .bg-navy { background-color: var(--primary-navy); }
+        .text-navy { color: var(--primary-navy); }
+        
+        /* Success Card Premium */
+        .success-card-premium {
+            background: white;
+            border-radius: 48px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .success-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #D4AF37 0%, #FFD700 50%, #D4AF37 100%);
+        }
+        
+        .success-icon-premium {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+        
+        .success-icon-premium i {
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .reg-number-box-premium {
+            background: linear-gradient(135deg, #0A1A3A 0%, #1e3a5f 100%);
+            border-radius: 32px;
+            padding: 32px 24px;
+            margin: 32px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .reg-number-box-premium::before {
+            content: '✦';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 120px;
+            color: rgba(212, 175, 55, 0.1);
+            font-family: Arial, sans-serif;
+            transform: rotate(15deg);
+        }
+        
+        .reg-number-box-premium::after {
+            content: '✦';
+            position: absolute;
+            bottom: -30px;
+            left: -20px;
+            font-size: 100px;
+            color: rgba(212, 175, 55, 0.08);
+            font-family: Arial, sans-serif;
+            transform: rotate(-10deg);
+        }
+        
+        .reg-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 3px;
+            word-break: break-word;
+        }
+        
+        .info-card-gold {
+            background: linear-gradient(135deg, #FFF8E1 0%, white 100%);
+            border-radius: 24px;
+            padding: 24px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+        
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .nav-brand-logo {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 16px rgba(212,175,55,0.3);
+        }
+        
+        .nav-brand-logo span {
+            color: var(--primary-navy);
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        
+        .nav-brand-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.2;
+        }
+        
+        .nav-brand-text h1 span {
+            color: #D4AF37;
+        }
+        
+        .nav-brand-text p {
+            font-size: 0.7rem;
+            color: #6b7280;
+            letter-spacing: 1px;
+        }
+        
+        .btn-cta {
+            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+            color: var(--primary-navy) !important;
+            padding: 0.65rem 1rem !important;
+            border-radius: 20px;
+            font-size:14px !important;
+            box-shadow: 0 8px 16px rgba(212,175,55,0.2);
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #0A1A3A 0%, #1e3a5f 100%);
+            color: white;
+            padding: 60px 5% 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-section h3 {
+            color: #D4AF37;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #D4AF37;
+            transform: translateX(5px);
+        }
+        
+        .footer-section i {
+            color: #D4AF37;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: #D4AF37;
+            transform: translateY(-5px);
+        }
+        
+        .social-links a:hover i {
+            color: var(--primary-navy);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+            
+            .success-card-premium {
+                padding: 40px 24px;
+            }
+            
+            .reg-number {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .success-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8fafc 0%, white 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 5% 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <div class="nav-brand-logo">
+                <span>SM</span>
+            </div>
+            <div class="nav-brand-text">
+                <h1>SMK<span>MBP</span></h1>
+                <p>Excellence in Education</p>
+            </div>
+        </div>
+        
+        <div>
+            <a href="register.html" class="btn-cta px-4 py-3 rounded-full">
+                <i class="fas fa-pen-to-square"></i> Daftar
+            </a>
+        </div>
+    </nav>
+
+    <!-- SUCCESS PAGE -->
+    <div class="success-page">
+        <div class="success-card-premium max-w-2xl w-full p-8 md:p-12">
+            <div class="success-icon-premium">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-navy mb-4">
+                Pendaftaran <span class="gold-gradient-text">Berhasil!</span>
+            </h1>
+            
+            <p class="text-gray-600 text-center text-lg mb-8">
+                Terima kasih telah mendaftar di <span class="font-bold text-navy">SMK MBP</span>.
+            </p>
+            
+            <div class="reg-number-box-premium">
+                <span class="block text-center text-yellow-400 text-sm uppercase tracking-wider mb-3">
+                    <i class="fas fa-ticket-alt mr-2"></i>Nomor Registrasi Anda
+                </span>
+                <div id="registrationNumber" class="reg-number text-center">
+                    PPDB/2026/XXXXXXXX
+                </div>
+            </div>
+            
+            <div class="info-card-gold flex items-start gap-4 mb-8">
+                <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-envelope text-white text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-navy text-lg mb-2">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        Email Konfirmasi Terkirim
+                    </h4>
+                    <p class="text-gray-600">
+                        Silakan cek inbox atau spam folder email Anda.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="register.html" class="border-2 border-navy text-navy px-8 py-4 rounded-full font-semibold inline-flex items-center justify-center gap-3 transition-all duration-300 hover:bg-navy hover:text-white">
+                    <i class="fas fa-arrow-left"></i>
+                    Daftar Lagi
+                </a>
+                <button onclick="window.print()" class="btn-navy px-8 py-4 rounded-full font-semibold inline-flex items-center justify-center gap-3 transition-all duration-300">
+                    <i class="fas fa-print"></i>
+                    Cetak
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-14 h-14 gold-gradient rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl">SM</span>
+                    </div>
+                    <div>
+                        <span class="text-3xl font-bold">SMK<span class="gold-gradient-text">MBP</span></span>
+                        <p class="text-gray-400 text-sm -mt-1">Excellence in Education</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">Mempersiapkan generasi unggul dengan pendidikan terbaik.</p>
+                <div class="flex space-x-3">
+                    <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-yellow-600 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-400 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h3><i class="fas fa-link"></i> Tautan</h3>
+                <ul class="space-y-3 text-gray-400 list-none">
+                    <li><a href="register.html"><i class="fas fa-chevron-right text-yellow-400 mr-2 text-xs"></i> Pendaftaran</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3><i class="fas fa-phone-alt"></i> Kontak</h3>
+                <ul class="space-y-3 text-gray-400 list-none">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-yellow-400 mr-3 mt-1"></i>
+                        <span>JL.Raya Randudongkal, Pemalang</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone-alt text-yellow-400 mr-3"></i>
+                        <span>(021) 1234-5678</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope text-yellow-400 mr-3"></i>
+                        <span>info@smkmbp.sch.id</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 SMK MBP - Sekolah Profesional Premium. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Back to top
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('shadow-lg', 'bg-white/95');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-white/95');
+            }
+        });
+
+        // Display registration number
+        document.addEventListener('DOMContentLoaded', function() {
+            const regNumber = sessionStorage.getItem('registration_number');
+            const el = document.getElementById('registrationNumber');
+            
+            if (regNumber) {
+                el.textContent = regNumber;
+            } else {
+                el.textContent = 'PPDB/2026/' + Math.random().toString(36).substring(2, 10).toUpperCase();
+            }
+        });
+    </script>
+</body>
+</html>
