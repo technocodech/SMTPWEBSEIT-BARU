@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekolah Profesional Premium - Mempersiapkan Generasi Unggul</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>   
+    <!-- Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- HAPUS AOS -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    
+    <style>
+        
+    </style>
+</head>
+<body class="bg-white text-gray-800 overflow-x-hidden">
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-lg z-50" id="navbar">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center shadow-lg">
+                    <span class="text-white font-bold text-xl">SP</span>
+                </div>
+                <div>
+                    <span class="text-2xl font-bold text-navy">SMK<span class="gold-gradient-text">MBP</span></span>
+                    <p class="text-xs text-gray-500 -mt-1">Excellence in Education</p>
+                </div>
+            </a>
+            <div class="hidden lg:flex space-x-10 items-center">
+                <a href="#home" class="text-navy font-medium hover:text-yellow-600 transition-all duration-300 relative group">
+                    Beranda
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#profil" class="text-navy font-medium hover:text-yellow-600 transition-all duration-300 relative group">
+                    Profil
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#program" class="text-navy font-medium hover:text-yellow-600 transition-all duration-300 relative group">
+                    Program
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#fasilitas" class="text-navy font-medium hover:text-yellow-600 transition-all duration-300 relative group">
+                    Fasilitas
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#prestasi" class="text-navy font-medium hover:text-yellow-600 transition-all duration-300 relative group">
+                    Prestasi
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#kontak" class="text-navy font-medium hover:text-yellow-600 transition-all duration-300 relative group">
+                    Kontak
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="register.html" class="btn-gold text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                    Daftar Sekarang
+                </a>
+            </div>
+            <button id="menuBtn" class="lg:hidden text-navy focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-6 border-b border-gray-700">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">SP</span>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold text-white">Sekolah<span class="gold-gradient-text">Pro</span></span>
+                    </div>
+                </a>
+                <button id="closeMenuBtn" class="text-white text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-0 p-6 flex-grow">
+                <a href="#home" class="py-4 border-b border-gray-700 text-white hover:text-yellow-400 transition flex items-center text-lg">
+                    <i class="fas fa-home mr-4 text-yellow-400"></i> Beranda
+                </a>
+                <a href="#profil" class="py-4 border-b border-gray-700 text-white hover:text-yellow-400 transition flex items-center text-lg">
+                    <i class="fas fa-school mr-4 text-yellow-400"></i> Profil
+                </a>
+                <a href="#program" class="py-4 border-b border-gray-700 text-white hover:text-yellow-400 transition flex items-center text-lg">
+                    <i class="fas fa-book-open mr-4 text-yellow-400"></i> Program
+                </a>
+                <a href="#fasilitas" class="py-4 border-b border-gray-700 text-white hover:text-yellow-400 transition flex items-center text-lg">
+                    <i class="fas fa-wifi mr-4 text-yellow-400"></i> Fasilitas
+                </a>
+                <a href="#prestasi" class="py-4 border-b border-gray-700 text-white hover:text-yellow-400 transition flex items-center text-lg">
+                    <i class="fas fa-trophy mr-4 text-yellow-400"></i> Prestasi
+                </a>
+                <a href="#kontak" class="py-4 border-b border-gray-700 text-white hover:text-yellow-400 transition flex items-center text-lg">
+                    <i class="fas fa-phone mr-4 text-yellow-400"></i> Kontak
+                </a>
+                <a href="register.html" class="mt-8 py-4 btn-gold text-white rounded-xl text-lg font-semibold shadow-lg text-center">
+                    <i class="fas fa-user-plus mr-2"></i> Form Pendaftaran
+                </a>
+            </div>
+            <div class="p-6 border-t border-gray-700">
+                <div class="flex space-x-4 justify-center">
+                    <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-yellow-600 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-blue-400 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-24 md:pt-0 flex items-center relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full gold-gradient opacity-10 animate-float"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-blue-900 opacity-5 animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute top-3/4 left-1/2 w-48 h-48 rounded-full gold-gradient opacity-10 animate-float" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 py-16 md:py-0 relative z-10">
+            <div class="max-w-3xl fade-in visible text-white">
+                <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                    <span class="text-yellow-400 font-semibold">Akreditasi A+</span>
+                    <span class="mx-2 text-gray-300">•</span>
+                    <span class="text-gray-200">Terbaik Nasional 2026</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight text-shadow">
+                    Masa Depan Dimulai di 
+                    <span class="gold-gradient-text">Sekolah Profesional</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl mt-6 mb-10 text-gray-200 max-w-2xl">
+                    Membentuk pemimpin masa depan dengan pendidikan holistik, teknologi terkini, dan pengembangan karakter unggul untuk menghadapi tantangan global.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="register.html" class="btn-gold text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg text-center">
+                        Daftar Sekarang <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#program" class="btn-outline-gold px-10 py-4 rounded-full text-lg font-semibold text-center">
+                        <i class="fas fa-play-circle mr-2"></i> Virtual Tour
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-8 border-t border-white/20">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 counter" data-target="98">0</div>
+                        <div class="text-gray-300 text-sm">Kelulusan UTBK</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 counter" data-target="150">0</div>
+                        <div class="text-gray-300 text-sm">Pengajar Profesional</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 counter" data-target="25">0</div>
+                        <div class="text-gray-300 text-sm">Program Unggulan</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-400 mb-1 counter" data-target="12">0</div>
+                        <div class="text-gray-300 text-sm">Lab Khusus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#profil" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Profil Sekolah -->
+    <section id="profil" class="section-padding bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-navy mb-4">Profil Sekolah</h2>
+                <div class="w-24 h-1 gold-gradient mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 text-xl max-w-3xl mx-auto">
+                    Sebagai institusi pendidikan premium berstandar internasional yang berkomitmen pada keunggulan akademik, pengembangan karakter, dan inovasi teknologi untuk masa depan.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="card-elegant p-8 hover-lift fade-in">
+                    <div class="text-5xl gold-gradient-text mb-6">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-navy mb-4">Visi</h3>
+                    <p class="text-gray-600 mb-6">Menjadi sekolah unggalan bertaraf internasional yang menghasilkan lulusan berkarakter kuat, kompeten secara akademik, berwawasan global, dan siap menjadi pemimpin di era revolusi industri 5.0.</p>
+                    <div class="progress-bar mt-4">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">Pencapaian: 95%</div>
+                </div>
+                
+                <div class="card-elegant p-8 hover-lift fade-in">
+                    <div class="text-5xl gold-gradient-text mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-navy mb-4">Misi</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <span>Menyelenggarakan pendidikan berkualitas tinggi berbasis teknologi dan riset</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <span>Mengembangkan potensi siswa secara holistik melalui program unggulan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <span>Menerapkan kurikulum internasional dengan penguatan nilai-nilai lokal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                            <span>Membangun kemitraan global untuk pertukaran ilmu dan budaya</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card-elegant p-8 hover-lift fade-in">
+                    <div class="text-5xl gold-gradient-text mb-6">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-navy mb-4">Nilai Inti</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-navy mb-1">Integritas</h4>
+                            <p class="text-gray-600 text-sm">Menjunjung tinggi kejujuran, transparansi, dan tanggung jawab dalam setiap tindakan.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy mb-1">Inovasi</h4>
+                            <p class="text-gray-600 text-sm">Terus menerus berkreasi dan mengadaptasi perkembangan teknologi terkini.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy mb-1">Kolaborasi</h4>
+                            <p class="text-gray-600 text-sm">Membangun sinergi dengan seluruh pemangku kepentingan untuk mencapai tujuan bersama.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy mb-1">Kepemimpinan</h4>
+                            <p class="text-gray-600 text-sm">Mengembangkan jiwa pemimpin yang visioner, inspiratif, dan melayani.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline Sejarah -->
+            <div class="mt-20 fade-in">
+                <h3 class="text-3xl font-bold text-navy mb-10 text-center">Perjalanan Kami</h3>
+                <div class="max-w-4xl mx-auto">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-navy mb-2">2005 - Pendirian</h4>
+                            <p class="text-gray-600">Sekolah Profesional didirikan dengan 3 kelas dan 15 pengajar profesional.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-navy mb-2">2010 - Akreditasi A</h4>
+                            <p class="text-gray-600">Memperoleh akreditasi A dari Badan Akreditasi Nasional.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-navy mb-2">2015 - Ekspansi Fasilitas</h4>
+                            <p class="text-gray-600">Pembangunan kampus baru dengan fasilitas modern dan teknologi terkini.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-navy mb-2">2020 - Kerjasama Internasional</h4>
+                            <p class="text-gray-600">Menjalin kemitraan dengan 5 universitas ternama di luar negeri.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-navy mb-2">2026 - Sekolah Unggulan</h4>
+                            <p class="text-gray-600">Terpilih sebagai salah satu sekolah terbaik nasional dengan predikat "Sekolah Unggulan".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Pendidikan -->
+    <section id="program" class="section-padding bg-navy text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Program Pendidikan Unggulan</h2>
+                <div class="w-24 h-1 gold-gradient mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+                    Kurikulum komprehensif yang dirancang untuk mempersiapkan siswa menghadapi tantangan masa depan dengan berbagai program spesialisasi.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover-lift border border-white/10 fade-in">
+                    <div class="w-20 h-20 rounded-xl gold-gradient flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-robot text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4">STEM & Robotika</h3>
+                    <p class="text-gray-300 mb-6 text-center">Pembelajaran sains, teknologi, teknik, dan matematika dengan fokus pada robotika dan kecerdasan buatan.</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Lab Robotika Canggih</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Kompetisi Nasional & Internasional</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Kerjasama dengan Perusahaan Teknologi</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover-lift border border-white/10 fade-in">
+                    <div class="w-20 h-20 rounded-xl gold-gradient flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-language text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Bahasa & Diplomasi</h3>
+                    <p class="text-gray-300 mb-6 text-center">Penguasaan multi-bahasa (Inggris, Mandarin, Jepang, Arab) dengan program diplomasi dan studi budaya.</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Native Speaker & Language Lab</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Pertukaran Pelajar Internasional</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Program Model United Nations</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover-lift border border-white/10 fade-in">
+                    <div class="w-20 h-20 rounded-xl gold-gradient flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-business-time text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Entrepreneurship</h3>
+                    <p class="text-gray-300 mb-6 text-center">Pengembangan jiwa wirausaha melalui program bisnis nyata, mentoring, dan inkubasi startup.</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Startup Incubation Center</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Mentoring Pengusaha Sukses</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Business Plan Competition</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover-lift border border-white/10 fade-in">
+                    <div class="w-20 h-20 rounded-xl gold-gradient flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-heartbeat text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Kesehatan & Lingkungan</h3>
+                    <p class="text-gray-300 mb-6 text-center">Program kesehatan, kebugaran, dan pelestarian lingkungan untuk hidup sehat dan berkelanjutan.</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Lab Kesehatan & Gizi</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Program Green School</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-2"></i>
+                            <span>Eco-Entrepreneurship</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Program International Baccalaureate -->
+            <div class="max-w-5xl mx-auto bg-gradient-to-r from-blue-900/30 to-navy/30 rounded-3xl p-8 md:p-12 border border-yellow-500/20 fade-in">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <div class="text-6xl gold-gradient-text mb-4">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-2">Program Internasional</h3>
+                        <div class="inline-flex items-center bg-yellow-500/20 text-yellow-400 rounded-full px-4 py-1 text-sm">
+                            <i class="fas fa-certificate mr-2"></i> Terakreditasi Internasional
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-10">
+                        <p class="text-gray-300 mb-6 text-lg">
+                            Sekolah Profesional menawarkan program International Baccalaureate (IB) Diploma Programme yang diakui oleh lebih dari 100 negara di dunia. Program ini dirancang untuk siswa usia 16-19 tahun yang ingin melanjutkan pendidikan ke universitas terbaik di dalam maupun luar negeri.
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="bg-white/5 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold text-yellow-400">100%</div>
+                                <div class="text-sm text-gray-300">Kelulusan IB</div>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold text-yellow-400">40+</div>
+                                <div class="text-sm text-gray-300">Sekolah Mitra Global</div>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold text-yellow-400">10+</div>
+                                <div class="text-sm text-gray-300">Bahasa yang Ditawarkan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas -->
+    <section id="fasilitas" class="section-padding bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-navy mb-4">Fasilitas Premium</h2>
+                <div class="w-24 h-1 gold-gradient mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 text-xl max-w-3xl mx-auto">
+                    Fasilitas lengkap berstandar internasional untuk mendukung proses belajar mengajar yang optimal dan pengembangan potensi siswa secara maksimal.
+                </p>
+            </div>
+            
+            <!-- Fasilitas utama -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="group relative overflow-hidden rounded-3xl h-96 fade-in">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Lab Sains" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 facility-card flex items-end">
+                        <div class="p-8 text-white">
+                            <div class="inline-flex items-center bg-yellow-500/90 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                                <i class="fas fa-flask mr-2"></i> Sains & Teknologi
+                            </div>
+                            <h4 class="text-2xl font-bold mb-2">Lab Sains Modern</h4>
+                            <p class="text-gray-100">12 laboratorium dengan peralatan terkini untuk eksperimen sains tingkat lanjut</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-3xl h-96 fade-in">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Perpustakaan Digital" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 facility-card flex items-end">
+                        <div class="p-8 text-white">
+                            <div class="inline-flex items-center bg-yellow-500/90 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                                <i class="fas fa-book-reader mr-2"></i> Literasi Digital
+                            </div>
+                            <h4 class="text-2xl font-bold mb-2">Perpustakaan Digital</h4>
+                            <p class="text-gray-100">Koleksi 50.000+ buku fisik dan 100.000+ e-book dengan akses online 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-3xl h-96 fade-in">
+                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Studio Multimedia" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 facility-card flex items-end">
+                        <div class="p-8 text-white">
+                            <div class="inline-flex items-center bg-yellow-500/90 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                                <i class="fas fa-video mr-2"></i> Kreativitas
+                            </div>
+                            <h4 class="text-2xl font-bold mb-2">Studio Multimedia</h4>
+                            <p class="text-gray-100">Fasilitas produksi konten kreatif lengkap dengan teknologi terbaru</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-3xl h-96 fade-in">
+                    <img src="https://images.unsplash.com/photo-1577471488278-16eec37c6c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Lapangan Olahraga" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 facility-card flex items-end">
+                        <div class="p-8 text-white">
+                            <div class="inline-flex items-center bg-yellow-500/90 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                                <i class="fas fa-running mr-2"></i> Olahraga
+                            </div>
+                            <h4 class="text-2xl font-bold mb-2">Arena Olahraga</h4>
+                            <p class="text-gray-100">Lapangan multifungsi, kolam renang, gym, dan fasilitas olahraga lengkap</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-3xl h-96 fade-in">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Ruang Inovasi" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 facility-card flex items-end">
+                        <div class="p-8 text-white">
+                            <div class="inline-flex items-center bg-yellow-500/90 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                                <i class="fas fa-lightbulb mr-2"></i> Inovasi
+                            </div>
+                            <h4 class="text-2xl font-bold mb-2">Innovation Hub</h4>
+                            <p class="text-gray-100">Ruang kolaborasi untuk pengembangan ide kreatif dan proyek inovatif</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-3xl h-96 fade-in">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Teater & Seni" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 facility-card flex items-end">
+                        <div class="p-8 text-white">
+                            <div class="inline-flex items-center bg-yellow-500/90 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                                <i class="fas fa-theater-masks mr-2"></i> Seni & Budaya
+                            </div>
+                            <h4 class="text-2xl font-bold mb-2">Teater & Studio Seni</h4>
+                            <p class="text-gray-100">Fasilitas seni lengkap untuk pengembangan bakat di bidang seni dan budaya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fasilitas Teknologi -->
+            <div class="max-w-6xl mx-auto bg-gradient-to-r from-navy to-blue-900 rounded-3xl p-8 md:p-12 text-white fade-in">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/5 mb-8 md:mb-0">
+                        <h3 class="text-3xl font-bold mb-4">Teknologi Pendidikan</h3>
+                        <p class="text-gray-300 mb-6">
+                            Sekolah Profesional dilengkapi dengan infrastruktur teknologi terkini untuk mendukung pembelajaran digital dan hybrid learning.
+                        </p>
+                        <a href="#" class="btn-gold text-white px-6 py-3 rounded-full font-semibold inline-flex items-center">
+                            Lihat Teknologi Kami <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="md:w-3/5 md:pl-12">
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                            <div class="bg-white/10 rounded-xl p-4 text-center hover:bg-white/20 transition">
+                                <i class="fas fa-wifi text-3xl text-yellow-400 mb-3"></i>
+                                <div class="font-bold">Wi-Fi 6</div>
+                                <div class="text-sm text-gray-300">Jaringan Nirkabel</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center hover:bg-white/20 transition">
+                                <i class="fas fa-laptop-code text-3xl text-yellow-400 mb-3"></i>
+                                <div class="font-bold">Smart Class</div>
+                                <div class="text-sm text-gray-300">Kelas Interaktif</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center hover:bg-white/20 transition">
+                                <i class="fas fa-shield-alt text-3xl text-yellow-400 mb-3"></i>
+                                <div class="font-bold">Security System</div>
+                                <div class="text-sm text-gray-300">Keamanan 24/7</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center hover:bg-white/20 transition">
+                                <i class="fas fa-cloud text-3xl text-yellow-400 mb-3"></i>
+                                <div class="font-bold">Cloud Platform</div>
+                                <div class="text-sm text-gray-300">Pembelajaran Online</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center hover:bg-white/20 transition">
+                                <i class="fas fa-tablet-alt text-3xl text-yellow-400 mb-3"></i>
+                                <div class="font-bold">Digital Library</div>
+                                <div class="text-sm text-gray-300">Perpustakaan Digital</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center hover:bg-white/20 transition">
+                                <i class="fas fa-robot text-3xl text-yellow-400 mb-3"></i>
+                                <div class="font-bold">AI Learning</div>
+                                <div class="text-sm text-gray-300">Pembelajaran AI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestasi & Testimoni -->
+    <section id="prestasi" class="section-padding bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-navy mb-4">Prestasi & Pengakuan</h2>
+                <div class="w-24 h-1 gold-gradient mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 text-xl max-w-3xl mx-auto">
+                    Berbagai prestasi membanggakan yang telah diraih oleh siswa dan sekolah dalam kompetisi nasional maupun internasional.
+                </p>
+            </div>
+            
+            <!-- Prestasi -->
+            <div class="mb-20 fade-in">
+                <h3 class="text-3xl font-bold text-navy mb-10 text-center">Prestasi Terbaru</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 hover-lift border-l-4 border-yellow-500">
+                        <div class="text-4xl gold-gradient-text mb-4">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy mb-2">Juara 1 Olimpiade Matematika</h4>
+                        <p class="text-gray-600 mb-4">International Mathematics Olympiad 2023</p>
+                        <div class="inline-flex items-center bg-yellow-50 text-yellow-700 rounded-full px-3 py-1 text-sm">
+                            <i class="fas fa-medal mr-1"></i> Tingkat Internasional
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-xl p-6 hover-lift border-l-4 border-yellow-500">
+                        <div class="text-4xl gold-gradient-text mb-4">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy mb-2">Juara 2 Debat Bahasa Inggris</h4>
+                        <p class="text-gray-600 mb-4">World Schools Debating Championship 2023</p>
+                        <div class="inline-flex items-center bg-yellow-50 text-yellow-700 rounded-full px-3 py-1 text-sm">
+                            <i class="fas fa-globe mr-1"></i> Kompetisi Global
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-xl p-6 hover-lift border-l-4 border-yellow-500">
+                        <div class="text-4xl gold-gradient-text mb-4">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy mb-2">Inovasi Teknologi Terbaik</h4>
+                        <p class="text-gray-600 mb-4">International Science and Engineering Fair 2023</p>
+                        <div class="inline-flex items-center bg-yellow-50 text-yellow-700 rounded-full px-3 py-1 text-sm">
+                            <i class="fas fa-flask mr-1"></i> Penghargaan Sains
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-xl p-6 hover-lift border-l-4 border-yellow-500">
+                        <div class="text-4xl gold-gradient-text mb-4">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy mb-2">Juara 1 Robotika</h4>
+                        <p class="text-gray-600 mb-4">First Global Challenge 2023</p>
+                        <div class="inline-flex items-center bg-yellow-50 text-yellow-700 rounded-full px-3 py-1 text-sm">
+                            <i class="fas fa-cogs mr-1"></i> Teknologi Robotika
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-10">
+                    <a href="#" class="btn-outline-gold px-8 py-3 rounded-full font-semibold inline-flex items-center">
+                        Lihat Semua Prestasi <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Testimoni -->
+            <div class="fade-in">
+                <h3 class="text-3xl font-bold text-navy mb-10 text-center">Testimoni Alumni</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card-elegant p-8 hover-lift">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center text-white text-2xl font-bold">AW</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg text-navy">Andi Wijaya</h4>
+                                <p class="text-gray-600">Alumni 2020, Mahasiswa ITB</p>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic mb-6">"Pembelajaran di Sekolah Profesional tidak hanya akademik, tetapi juga life skills. Program entrepreneurship membantu saya membuka startup di usia muda yang sekarang sudah berkembang dengan 10 karyawan."</p>
+                        <div class="pt-4 border-t border-gray-100">
+                            <div class="text-sm text-gray-500">Saat ini: Founder & CEO TechStartupID</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-elegant p-8 hover-lift">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center text-white text-2xl font-bold">SD</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg text-navy">Sari Dewi</h4>
+                                <p class="text-gray-600">Alumni 2021, UI Medical School</p>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic mb-6">"Fasilitas lab sains yang lengkap dan guru-guru yang kompeten memberikan persiapan terbaik untuk kuliah di bidang kedokteran. Program penelitian yang saya ikuti di sekolah menjadi bekal berharga di dunia medis."</p>
+                        <div class="pt-4 border-t border-gray-100">
+                            <div class="text-sm text-gray-500">Penerima Beasiswa: Kementerian Kesehatan</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-elegant p-8 hover-lift">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 rounded-full gold-gradient flex items-center justify-center text-white text-2xl font-bold">RF</div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg text-navy">Rizky Fadillah</h4>
+                                <p class="text-gray-600">Alumni 2019, Harvard University</p>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic mb-6">"Program International Baccalaureate di Sekolah Profesional menjadi jalan saya untuk bisa diterima di Harvard. Kurikulum yang komprehensif dan guru-guru yang supportive membuat saya siap bersaing di tingkat global."</p>
+                        <div class="pt-4 border-t border-gray-100">
+                            <div class="text-sm text-gray-500">Studi: Computer Science, Harvard University</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Lokasi -->
+    <section id="kontak" class="section-padding bg-navy text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Kontak & Lokasi</h2>
+                <div class="w-24 h-1 gold-gradient mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+                    Hubungi kami untuk informasi lebih lanjut atau kunjungi kampus kami untuk melihat fasilitas langsung.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-8">Informasi Kontak</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Alamat Kampus</h4>
+                                <p class="text-gray-300">JL.Raya Randudongkal, Belik Pemalang 52356</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Telepon & WhatsApp</h4>
+                                <p class="text-gray-300">(021) 1234-5678</p>
+                                <p class="text-gray-300">+62 857-1281-6240 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email & Website</h4>
+                                <p class="text-gray-300">info@smkmbp.sch.id</p>
+                                <p class="text-gray-300">admissions@smkmbp.sch.id</p>
+                                <p class="text-gray-300">www.smkmbp.sch.id</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Jam Operasional</h4>
+                                <p class="text-gray-300">Senin - Jumat: 07.00 - 17.00 WIB</p>
+                                <p class="text-gray-300">Sabtu: 08.00 - 14.00 WIB</p>
+                                <p class="text-gray-300">Minggu & Hari Libur: Tutup</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2 fade-in">
+                    <h3 class="text-2xl font-bold mb-8">Lokasi Kampus</h3>
+                    <!-- Peta (placeholder) -->
+                    <div class="bg-white/10 rounded-2xl overflow-hidden h-96 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-6xl text-yellow-400/30 mb-4"></i>
+                                <p class="text-gray-300">Peta Interaktif Lokasi Kampus</p>
+                                <p class="text-gray-400 text-sm mt-2">Integrasi dengan Google Maps atau peta interaktif</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <h4 class="font-bold mb-2">Akses Transportasi</h4>
+                            <ul class="text-gray-300 text-sm space-y-1">
+                                <li class="flex items-center"><i class="fas fa-bus mr-2 text-yellow-400"></i> Bus dari Gunung Jaya</li>
+                                <li class="flex items-center"><i class="fas fa-train mr-2 text-yellow-400"></i> Bus dari dongkal Purbalingga</li>
+                                <li class="flex items-center"><i class="fas fa-car mr-2 text-yellow-400"></i> Parkir Luas: 200+ kendaraan</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <h4 class="font-bold mb-2">Jadwalkan Kunjungan</h4>
+                            <p class="text-gray-300 text-sm mb-4">Ingin melihat fasilitas kampus secara langsung?</p>
+                            <a href="#" class="btn-gold text-white px-4 py-2 rounded-lg text-sm font-semibold inline-flex items-center">
+                                <i class="fas fa-calendar-alt mr-2"></i> Jadwalkan Tur
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-navy to-blue-900 text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full gold-gradient opacity-10"></div>
+            <div class="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-blue-800 opacity-5"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10 fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Bergabunglah dengan Komunitas Unggulan</h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Daftarkan diri Anda sekarang dan mulailah perjalanan pendidikan terbaik untuk masa depan yang gemilang bersama Sekolah Profesional.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="register.html" class="btn-gold text-white px-12 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition inline-flex items-center justify-center">
+                    <i class="fas fa-user-plus mr-3"></i> Daftar Sekarang
+                </a>
+                <a href="#" class="border-2 border-white text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-navy transition inline-flex items-center justify-center">
+                    <i class="fas fa-download mr-3"></i> Download Brosur
+                </a>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-white/20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-yellow-400 mb-1">30 Juni 2026</div>
+                        <div class="text-gray-300">Batas Pendaftaran Gelombang 1</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-yellow-400 mb-1">15 Juli 2026</div>
+                        <div class="text-gray-300">Tes Masuk Gelombang 1</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-yellow-400 mb-1">20 Juli 2026</div>
+                        <div class="text-gray-300">Pengumuman Hasil Seleksi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-14 h-14 gold-gradient rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-2xl">SM</span>
+                        </div>
+                        <div>
+                            <span class="text-3xl font-bold">SMK<span class="gold-gradient-text">MBP</span></span>
+                            <p class="text-gray-400 text-sm -mt-1">Excellence in Education</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Mempersiapkan generasi unggul dengan pendidikan terbaik, teknologi terkini, dan pengembangan karakter untuk masa depan gemilang.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-yellow-600 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-400 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Link Cepat</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#home" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-chevron-right text-yellow-400 mr-2 text-xs"></i> Beranda</a></li>
+                        <li><a href="#profil" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-chevron-right text-yellow-400 mr-2 text-xs"></i> Profil Sekolah</a></li>
+                        <li><a href="#program" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-chevron-right text-yellow-400 mr-2 text-xs"></i> Program Pendidikan</a></li>
+                        <li><a href="#fasilitas" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-chevron-right text-yellow-400 mr-2 text-xs"></i> Fasilitas</a></li>
+                        <li><a href="#prestasi" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-chevron-right text-yellow-400 mr-2 text-xs"></i> Prestasi</a></li>
+                        <li><a href="register.html" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-chevron-right text-yellow-400 mr-2 text-xs"></i> Pendaftaran</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Program Unggulan</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-graduation-cap text-yellow-400 mr-2"></i> STEM & Robotika</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-language text-yellow-400 mr-2"></i> Bahasa & Diplomasi</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-business-time text-yellow-400 mr-2"></i> Entrepreneurship</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-heartbeat text-yellow-400 mr-2"></i> Kesehatan & Lingkungan</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition flex items-center"><i class="fas fa-globe text-yellow-400 mr-2"></i> International Baccalaureate</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi terbaru tentang kegiatan sekolah, event, dan pendaftaran.</p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Email Anda" class="bg-gray-800 text-white px-4 py-3 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <button class="gold-gradient text-white px-4 py-3 rounded-r-lg font-semibold">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="text-gray-500 text-sm">Dengan berlangganan, Anda menyetujui Kebijakan Privasi kami.</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-400">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p>&copy; 2026 Sekolah Profesional Premium. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-yellow-400 transition">Kebijakan Privasi</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Syarat & Ketentuan</a>
+                        <a href="#" class="hover:text-yellow-400 transition">Peta Situs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isMenuOpen = true;
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            isMenuOpen = false;
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && 
+                !mobileMenu.contains(e.target) && 
+                !menuBtn.contains(e.target)) {
+                
+                isMenuOpen = false;
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('shadow-lg', 'bg-white/95');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-white/95');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                // Skip if it's not an anchor link
+                if (href === '#' || href.startsWith('#')) {
+                    e.preventDefault();
+                    
+                    const targetId = href;
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Intersection Observer untuk animasi fade-in yang lebih ringan
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Unobserve setelah muncul untuk mengurangi overhead
+                    fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1, // Hanya perlu 10% elemen terlihat
+            rootMargin: '0px 0px -100px 0px' // Mulai animasi sedikit sebelum elemen masuk viewport
+        });
+
+        // Observe semua elemen dengan class fade-in
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+
+        // Animated counter untuk stats
+        const counters = document.querySelectorAll('.counter');
+        
+        const countObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    const speed = 50; // Kecepatan counter (semakin kecil semakin cepat)
+                    
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        const increment = target / speed;
+                        
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 30);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    
+                    updateCount();
+                    countObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => {
+            countObserver.observe(counter);
+        });
+
+        // Optimasi gambar lazy loading
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            
+            // Tambahkan loading="lazy" untuk semua gambar
+            images.forEach(img => {
+                if (!img.hasAttribute('loading')) {
+                    img.setAttribute('loading', 'lazy');
+                }
+            });
+            
+            // Inisialisasi progress bars
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+
+        // Optimasi untuk mencegah layout shift
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            if (!img.complete) {
+                img.classList.add('image-placeholder');
+                img.onload = function() {
+                    this.classList.remove('image-placeholder');
+                };
+            }
+        });
+    </script>
+</body>
+</html>
